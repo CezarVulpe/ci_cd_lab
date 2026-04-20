@@ -53,6 +53,7 @@ func main() {
 	log.Println("Starting server on http://localhost:8080")
 	if err := server.ListenAndServe(); err != http.ErrServerClosed {
 		log.Fatalf("HTTP server ListenAndServe: %v", err)
+		log.Println("Server stopped.")
 	}
 
 	<-idleConnsClosed
